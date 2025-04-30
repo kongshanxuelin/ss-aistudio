@@ -15,8 +15,8 @@
 
 ### 安装运行
 
-- 本项目依赖python 3.10版本，请[下载解压](http://wps.sumslack.com/Python310.zip)到本程序目录下，目录名：`Python310`
-- 本项目依赖cef，请[下载解压](http://wps.sumslack.com/browser.zip)到本程序目录下，目录名：`browser`
+- 本项目依赖python 3.10版本，请下载解压：http://wps.sumslack.com/Python310.zip 到本程序目录下，目录名：`Python310`
+- 本项目依赖cef，请下载解压：http://wps.sumslack.com/browser.zip 到本程序目录下，目录名：`browser`
 - 点击exe文件即可运行。
 
 
