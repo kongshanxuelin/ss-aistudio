@@ -20,7 +20,7 @@
 ### 功能开发
 在`html`文件夹中修改`cef_test.html`和`main.js`即可，核心类`nativeAPI`的回调函数说明：
 
-```
+```javascript
 if(typeof(nativeAPI)!= 'undefined'){
         ((obj) => {
 			// 开始接收大模型的问答
