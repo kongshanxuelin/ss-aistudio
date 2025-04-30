@@ -1,9 +1,11 @@
 ### 概述
 **SS AIStudio** 是一款支持多个大语言模型（LLM）服务商的桌面客户端，为了追求极致性能，采用`c++`和`Python`实现。
 
-![](https://doc-nn.qeubee.cn/server/index.php?s=/api/attachment/visitFile&sign=a3e51bdac679add356fe7a93be2c6985)
+![image](https://github.com/user-attachments/assets/0e83b5bd-c157-4d0b-94e9-3231278b6011)
 
-![](https://doc-nn.qeubee.cn/server/index.php?s=/api/attachment/visitFile&sign=53c867ded55bb598c9a48fc2c7334a6c)
+
+![image](https://github.com/user-attachments/assets/ad8d23ae-e4b3-4a45-bc16-d25d03c669d3)
+
 
 ### 主要特性
 
