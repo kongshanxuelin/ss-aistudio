@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+	<link rel="stylesheet" href="./asserts/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./asserts/highlight/styles/github.min.css">
+    <script src="./asserts/js/jquery.min.js"></script>
+    <script src="./asserts/js/marked.min.js"></script>
+    <script src="./asserts/highlight/highlight.min.js"></script>
+    <script defer src="./asserts/mathjax/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="./asserts/css/katex.min.css">
+    <script src="./asserts/js/split.min.js"></script>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+			background-color:#f6f7fb;
+        }
+		a {
+			text-decoration: none;
+            color: #007BFF; 
+		}
+		
+		p {margin:0;}
+		.message { max-width: 90%; padding: 10px; border-radius: 10px; margin: 5px; }
+        .sent { 
+			align-self: flex-end; 
+			background: #eff6ff; 
+			color: #262626;
+			max-width: calc(100% - 48px);
+			border-radius:14px;
+			box-sizing: border-box;
+		}
+        .received { 
+			align-self: flex-start; 
+			color: #222222; 
+			background-color: #FFFFFF;
+		}
+        .split {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .gutter {
+            background-color: #ccc;
+            cursor: row-resize;
+            height: 2px;
+            flex-shrink: 0;
+        }
+        .chat-box {
+			border: 1px solid #ccc; 
+			padding: 10px; 
+            background-color: #f6f7fb;
+			overflow-y: auto; 
+			display: flex; 
+			flex-direction: column; 
+        }
+        .bottom-container {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            overflow: hidden;
+			background-color: #f6f7fb;
+        }
+        .content {
+            background: white;
+            flex-grow: 1;
+            display: flex;
+            padding: 0;
+            overflow: hidden;
+        }
+        textarea {
+            width: 100%;
+            height: 100%;
+            border: none;
+            resize: none; /* 禁止用户手动调整 */
+            padding: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+        .toolbar {
+            height: 40px;
+            background-color: #f6f7fb;
+            color: white;
+            display: flex;
+			justify-content: space-between;
+            align-items: center;
+            padding: 2px 10px;
+            flex-shrink: 0;
+        }
+		.code-block { 
+			position: relative; 
+			background: #585a73; 
+			color: #fafafc;
+		}
+		pre {
+			margin-top: 12px;
+			border: 1px solid #CCC;
+			border-radius: 5px;
+		}
+        .copy-btn { 
+            color:#FFFFFF;
+        }
+        .code-block:hover .copy-btn { display: block; }
+        .copy-btn:hover { }
+		.func-error {
+			margin-left:12px;
+			color:#f44336;
+		}
+		.func-succ {
+			margin-left:12px;
+			color:#00B46B;
+		}
+		.received .thinking {
+			display:none;
+			border:1px solid #999;
+			padding:4px;
+			margin-bottom:6px;
+		}
+		h4.quote-thinking-head{
+			height:25px;
+			line-height:25px;
+			color:#222222;
+			padding:2px 6px;
+			cursor:pointer;
+			font-size:12px;
+		}
+		.quote-thinking {
+			color:#777777;
+			padding:6px;
+			line-height:22px;
+		}
+		
+		.received .mcplist {
+			display:none;
+			margin-bottom:6px;
+		}
+		.mcplist-item {
+			border:1px solid #999;
+		}
+		h4.quote-mcp-head{
+			height:25px;
+			line-height:25px;
+			color:#222222;
+			padding:2px 6px;
+			cursor:pointer;
+			font-size:14px;
+			color:orange;
+			font-weight:bold;
+		}
+		.quote-mcp {
+			display:none;
+		}
+		
+		.received .ans-content{
+		}
+		.received .ans-content-think{
+			color:#999999;
+			font-size:12px;
+			margin-bottom:8px;
+			padding:6px;
+		}
+    </style>
+</head>
+<body>
+
+<div class="split" id="split-container">
+    <div class="chat-box" id="chat-box">
+	</div>
+    <div class="gutter"></div>
+    <div class="bottom-container">
+        <div class="content">
+            <textarea rows=2 id="chat-input" placeholder="请输入内容..."></textarea>
+        </div>
+        <div class="toolbar">
+			<div>
+				<button id="clear-msg-btn" title="清空消息" class="btn btn-default btn-sm">📷</button>
+                <span style="display: inline-block;height: 25px;line-height: 25px;padding-top:8px;color:#000;">
+                    <input type="checkbox" id="chk_lianxu" value="1">
+                    <label for="chk_lianxu">连续对话</label>
+                </span>
+			</div>
+			<div>
+				<button class="btn btn-danger btn-sm" id="clear-btn">清除上下文</button>
+				<button class="btn btn-primary btn-sm" id="send-btn" disabled>发送</button>
+			</div>
+		</div>
+    </div>
+</div>
+
+<script>
+    Split(['.chat-box', '.bottom-container'], {
+        sizes: [85, 15], 
+        minSize: 15, 
+        gutterSize: 2,
+        direction: 'vertical'
+    });
+</script>
+<script src="./asserts/js/main.js"></script>
+</body>
+</html>
