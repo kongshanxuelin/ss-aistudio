@@ -4,7 +4,8 @@
 ![image](https://github.com/user-attachments/assets/0e83b5bd-c157-4d0b-94e9-3231278b6011)
 
 
-![image](https://github.com/user-attachments/assets/ad8d23ae-e4b3-4a45-bc16-d25d03c669d3)
+![image](https://github.com/user-attachments/assets/356a87ea-7b64-4b1d-a9e6-1fe93ff8a5eb)
+
 
 
 ### 主要特性
