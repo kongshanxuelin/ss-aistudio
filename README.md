@@ -1,0 +1,66 @@
+### 概述
+**SS AIStudio** 是一款支持多个大语言模型（LLM）服务商的桌面客户端，为了追求极致性能，采用`c++`和`Python`实现。
+
+![](https://doc-nn.qeubee.cn/server/index.php?s=/api/attachment/visitFile&sign=a3e51bdac679add356fe7a93be2c6985)
+
+![](https://doc-nn.qeubee.cn/server/index.php?s=/api/attachment/visitFile&sign=53c867ded55bb598c9a48fc2c7334a6c)
+
+### 主要特性
+
+- 支持修改内置UI：如增加工具栏按钮，修改交互等，仅需要了解基础HTML
+- 支持主流 LLM 云服务：OpenAI、ollama本地模型、硅基流动等。
+- 基本对话功能：支持数学公式，代码高亮复制等
+- 支持融合深度思考
+- 文档与数据处理：支持本地知识库构建，支持markdown，pdf，word等
+- 支持MCP(模型上下文协议) 服务：支持MCP Server管理（studio，sse等协议支持）
+
+### 功能开发
+在`html`文件夹中修改`cef_test.html`和`main.js`即可，核心类`nativeAPI`的回调函数说明：
+
+```
+if(typeof(nativeAPI)!= 'undefined'){
+        ((obj) => {
+			// 开始接收大模型的问答
+            obj.register('receiveAnswer', (param)=>{
+                ......
+            })
+			// 开始接收思考过程
+			obj.register('receiveThinking', (param)=>{
+				......
+            })
+			// 收到问答结束回调
+            obj.register('finishAnswer', ()=>{
+                ......
+            })
+			// 收到取消动作
+            obj.register('abortAnswer', ()=>{
+                ......
+            })
+			// 收到错误信息
+            obj.register('errorAnswer', (param)=>{
+                ......
+            })
+            // 收到引用消息
+            obj.register('receiveQuote', (param)=>{
+                ......
+            })
+			// 收到MCP消息
+			obj.register('receiveMcp', (param)=>{
+                ......
+            })
+			//删除回调
+			obj.register('clearHistory',(param)=>{
+				......
+			});
+			//首次打开会话窗口的，当前历史聊天消息
+            obj.register('receiveHistory', (param)=>{
+                ......
+            })
+        })(nativeAPI)
+    }
+```
+
+核心类`nativeAPI`的方法说明：
+
+- 发送取消回答：`nativeAPI.call('stop');`
+- 大模型提问：`nativeAPI.call('question', [{ role: "user", content: "你是谁？" }]);`
