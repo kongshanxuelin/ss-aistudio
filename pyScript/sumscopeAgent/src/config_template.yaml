@@ -1,0 +1,7 @@
+api:
+  url: https://api.siliconflow.cn/v1/embeddings
+  key: sk-lcmgoofhdtzibdjvizbzzuyuvmwnuzavvdrabokwstieedal
+  model: BAAI/bge-m3
+
+database:
+  name: updated_embeddings_db

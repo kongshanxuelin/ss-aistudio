@@ -1,0 +1,38 @@
+[
+    {
+        "serverId": 1,
+        "serverName": "siliconflow",
+        "serverBaseUrl": "https://api.siliconflow.cn",
+        "serverChatUrl": "https://api.siliconflow.cn/v1/chat/completions",
+        "serverEmbeddingUrl": "https://api.siliconflow.cn/v1/embeddings",
+        "serverApiKey": "",
+        "serverState": 1
+    },
+    {
+        "serverId": 2,
+        "serverName": "moonshot",
+        "serverBaseUrl": "https://api.moonshot.cn",
+        "serverChatUrl": "https://api.moonshot.cn/v1/chat/completions",
+        "serverEmbeddingUrl": "",
+        "serverApiKey": "",
+        "serverState": 0
+    },
+    {
+        "serverId": 3,
+        "serverName": "OpenAI",
+        "serverBaseUrl": "https://api.openai.com",
+        "serverChatUrl": "https://api.openai.com/v1/chat/completions",
+        "serverEmbeddingUrl": "",
+        "serverApiKey": "",
+        "serverState": 0
+    },
+    {
+        "serverId": 4,
+        "serverName": "qianxun",
+        "serverBaseUrl": "https://qianxun.rcrai.com/open/qianxun",
+        "serverChatUrl": "https://qianxun.rcrai.com/open/qianxun/v1/chat/completions",
+        "serverEmbeddingUrl": "",
+        "serverApiKey": "",
+        "serverState": 0
+    }
+]

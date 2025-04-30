@@ -1,0 +1,18 @@
+[
+    {
+        "RemoteFileId": 1,
+        "FileName": "test.md",
+        "FileId": 43519249,
+        "Threshold": 0.5,
+        "TopK": 10,
+        "FileCreatedAt": "2025-03-20 10:24:31"
+    },
+    {
+        "RemoteFileId": 2,
+        "FileName": "抚州金溪县国有资本经营预算收入执行情况表.pdf",
+        "FileId": 38737914,
+        "Threshold": 0.5,
+        "TopK": 10,
+        "FileCreatedAt": "2025-03-20 10:24:31"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "modelName": "BAAI/bge-m3",
+        "serverId": 1,
+        "serverName": "siliconflow",
+        "defaultModel": true,
+        "embeddingModel": true,
+        "maxTokens": 8192
+    },
+    {
+        "modelName": "deepseek-ai/DeepSeek-R1",
+        "serverId": 1,
+        "serverName": "siliconflow",
+        "defaultModel": true,
+        "embeddingModel": false,
+        "maxTokens": 128000
+    },
+    {
+        "modelName": "qianxun-l-8k-nocof",
+        "serverId": 4,
+        "serverName": "qianxun",
+        "defaultModel": false,
+        "embeddingModel": false,
+        "maxTokens": 8000
+    },
+    {
+        "modelName": "qianxun-l-32k-nocof",
+        "serverId": 4,
+        "serverName": "qianxun",
+        "defaultModel": false,
+        "embeddingModel": false,
+        "maxTokens": 32000
+    },
+    {
+        "modelName": "qianxun-l-128k-nocof",
+        "serverId": 4,
+        "serverName": "qianxun",
+        "defaultModel": false,
+        "embeddingModel": false,
+        "maxTokens": 128000
+    }
+]

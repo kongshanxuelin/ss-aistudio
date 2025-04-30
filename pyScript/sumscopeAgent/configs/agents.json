@@ -1,0 +1,26 @@
+[
+  {
+    "id": "780",
+    "name": "远程智能体",
+    "emoji": "✨",
+    "group": [
+      "远程"
+    ],
+    "prompt": "你是一个文档助手，善于从提供的知识库中获取答案",
+    "description": "",
+    "isLocal": 1,
+    "knowledgeIdList": ""
+  },
+  {
+    "id": "781",
+    "name": "测试智能体-1",
+    "emoji": "✨",
+    "group": [
+      "远程"
+    ],
+    "prompt": "测试智能体",
+    "description": "",
+    "isLocal": 1,
+    "knowledgeIdList": ""
+  }
+]
