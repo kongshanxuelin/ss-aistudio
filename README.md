@@ -2,11 +2,7 @@
 **SS AIStudio** 是一款支持多个大语言模型（LLM）服务商的桌面客户端，为了追求极致性能，采用`c++`和`Python`实现。
 
 ![image](https://github.com/user-attachments/assets/0e83b5bd-c157-4d0b-94e9-3231278b6011)
-
-
 ![image](https://github.com/user-attachments/assets/356a87ea-7b64-4b1d-a9e6-1fe93ff8a5eb)
-
-
 
 ### 主要特性
 
@@ -16,6 +12,14 @@
 - 支持融合深度思考
 - 文档与数据处理：支持本地知识库构建，支持markdown，pdf，word等
 - 支持MCP(模型上下文协议) 服务：支持MCP Server管理（studio，sse等协议支持）
+
+### 安装运行
+
+- 本项目依赖python 3.10版本，请[下载解压](http://wps.sumslack.com/Python310.zip)到本程序目录下，目录名：`Python310`
+- 本项目依赖cef，请[下载解压](http://wps.sumslack.com/browser.zip)到本程序目录下，目录名：`browser`
+- 点击exe文件即可运行。
+
+
 
 ### 功能开发
 在`html`文件夹中修改`cef_test.html`和`main.js`即可，核心类`nativeAPI`的回调函数说明：
