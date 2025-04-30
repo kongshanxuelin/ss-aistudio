@@ -19,6 +19,7 @@
 - 本项目依赖cef，请下载解压：http://wps.sumslack.com/browser.zip 到本程序目录下，目录名：`browser`
 - 点击exe文件即可运行。
 
+![image](https://github.com/user-attachments/assets/a3dad98c-a1d5-4c6b-a221-1cc2fa6ff032)
 
 
 ### 功能开发
